@@ -17,5 +17,19 @@ const starWarsMovies = [
   ];
   
   // Añade tu código de bucle aquí
-  
-  
+  const starWarsDecade = {the70:[],the80:[],the90:[],the2000:[],the2010:[]};
+  for (const movie of starWarsMovies) {
+    if ( 1970 <= movie.releaseYear && movie.releaseYear < 1980 ) {
+      starWarsDecade.the70.push(movie.title)
+    } else if ( 1980 <= movie.releaseYear && movie.releaseYear < 1990 ){
+      starWarsDecade.the80.push(movie.title)
+    } else if ( 1990 <= movie.releaseYear && movie.releaseYear < 2000 ){
+      starWarsDecade.the90.push(movie.title)
+    } else if ( 2000 <= movie.releaseYear && movie.releaseYear < 2010 ){
+      starWarsDecade.the2000.push(movie.title)
+    } else if ( 2010 <= movie.releaseYear && movie.releaseYear < 2020 ){
+      starWarsDecade.the2010.push(movie.title)
+  }
+}
+
+console.log(starWarsDecade);

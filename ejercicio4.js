@@ -16,18 +16,24 @@ const cartoons = [
 ];
 
 // Añade tu código de bucle aquí
-let year = 0;
-let nombre = "";
 
-for (const cartoon of cartoons) {
-  if (year == 0) {
-    year = cartoon.debut;
-  } else {
-    console.log("pepino");
-    if (year > cartoon.debut) {
-      nombre = cartoon.name;
-    }
+comparador = cartoons[0];
+for (let i = 0; i < cartoons.length; i++) {
+  if (cartoons[i].debut < comparador.debut) {
+    comparador = cartoons[i];
   }
 }
 
-console.log(nombre);
+console.log(comparador.name, "\n");
+
+//Versión Array function
+
+const initial = cartoons[0];
+
+const cartoonMoreOlder = cartoons.reduce(
+  (accumulator, currentValue) =>
+    accumulator.debut > currentValue.debut ? currentValue : accumulator,
+  initial
+);
+
+console.log(`${cartoonMoreOlder.name}`);
