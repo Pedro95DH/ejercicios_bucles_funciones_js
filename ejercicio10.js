@@ -5,20 +5,22 @@
 // La función debe manejar casos en los que el país no esté en la lista, devolviendo un mensaje adecuado.
 
 const capitals = {
-    Spain: 'Madrid',
-    France: 'Paris',
-    Italy: 'Rome',
-    Germany: 'Berlin',
-    Portugal: 'Lisbon',
-    Poland: 'Warsaw',
-    Greece: 'Athens',
-    Austria: 'Vienna',
-    Hungary: 'Budapest',
-    Ireland: 'Dublin'
-  };
-  
-  function getCapital(country) {
-    // insert code
-  }
-  
-  
+  Spain: "Madrid",
+  France: "Paris",
+  Italy: "Rome",
+  Germany: "Berlin",
+  Portugal: "Lisbon",
+  Poland: "Warsaw",
+  Greece: "Athens",
+  Austria: "Vienna",
+  Hungary: "Budapest",
+  Ireland: "Dublin",
+};
+
+function getCapital(country) {
+  return capitals[country] || 'El país no existe en la lista';
+}
+
+console.log(getCapital('aaaaaa'));
+
+
