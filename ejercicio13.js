@@ -16,5 +16,15 @@ const actors = [
 ];
 
 function calculateActorsAges(actors) {
-  // insert code
+  let fecha = new Date();
+  let year = fecha.getFullYear();
+  const ageActors = [{"nombre":null,"age":null}];
+  
+  for (let i = 0; i < actors.length; i++) {
+    ageActors.push(nombre[actors[i].name], age[year - actors[i].born]);
+  }
+  console.log(ageActors);
 }
+
+
+calculateActorsAges(actors);

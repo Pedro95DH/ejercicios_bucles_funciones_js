@@ -18,9 +18,7 @@ const capitals = {
 };
 
 function getCapital(country) {
-  return capitals[country] || 'El país no existe en la lista';
+  return capitals[country] || "El país no existe en la lista";
 }
 
-console.log(getCapital('aaaaaa'));
-
-
+console.log(getCapital("Spain"));
