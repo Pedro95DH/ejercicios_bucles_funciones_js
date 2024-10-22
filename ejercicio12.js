@@ -25,11 +25,10 @@ function findMutantByPower(mutants, power) {
   }
   if (mutantFound.length == 0) {
     console.log(`No existen mutantes con ${power} en la base de datos`);
-  } else if (mutantFound.length == 1){
+  } else if (mutantFound.length == 1) {
     console.log(`El mutante con ${power} es: ${mutantFound}`);
-  }
-  else{
-      console.log(`Los mutantes con ${power} son : ${mutantFound}`);
+  } else {
+    console.log(`Los mutantes con ${power} son : ${mutantFound}`);
   }
 }
 findMutantByPower(mutants, "sensualidad");
